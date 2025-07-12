@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import QuestionCard from "../components/QuestionCard";
 import api from "../utils/api";
 import "../styles/Home.css";
@@ -14,6 +15,7 @@ const Home = () => {
   const [filter, setFilter] = useState("newest");
   const [search, setSearch] = useState("");
   const [searchInput, setSearchInput] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -52,25 +54,30 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <form className="home-filters" onSubmit={handleSearch}>
-        <select
-          className="navbar-filter"
-          value={filter}
-          onChange={handleFilterChange}
-        >
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
-          <option value="unanswered">Unanswered</option>
-        </select>
-        <input
-          className="navbar-search"
-          type="text"
-          placeholder="Search"
-          value={searchInput}
-          onChange={(e) => setSearchInput(e.target.value)}
-        />
-        <button type="submit">Search</button>
-      </form>
+      <div className="home-topbar">
+        <button className="home-ask-btn" onClick={() => navigate("/ask")}>
+          Ask New Question
+        </button>
+        <form className="home-filters" onSubmit={handleSearch}>
+          <select
+            className="navbar-filter"
+            value={filter}
+            onChange={handleFilterChange}
+          >
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="unanswered">Unanswered</option>
+          </select>
+          <input
+            className="navbar-search"
+            type="text"
+            placeholder="Search"
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+          />
+          <button type="submit">Search</button>
+        </form>
+      </div>
       <div className="questions-list">
         {loading && <div>Loading questions...</div>}
         {error && <div className="home-error">{error}</div>}

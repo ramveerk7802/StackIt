@@ -27,9 +27,59 @@
 .home-filters {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
+  margin: 0;
+}
+
+.navbar-filter,
+.navbar-search {
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.home-filters button[type="submit"] {
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  border: 1px solid #1976d2;
+  background: #fff;
+  color: #1976d2;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.home-filters button[type="submit"]:hover {
+  background: #1976d2;
+  color: #fff;
+}
+
+.home-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
   margin-bottom: 1.5rem;
 }
+
+.home-ask-btn {
+  background: #1976d2;
+  color: #fff;
+  border: 2px solid #1976d2;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.home-ask-btn:hover {
+  background: #fff;
+  color: #1976d2;
+}
+
 .pagination button.active {
   background: #1976d2;
   color: #fff;

@@ -1,9 +1,29 @@
 import React from "react";
 import "../styles/AnswerCard.css";
 
-const AnswerCard = ({ answer, onVote, onAccept, isOwner, user }) => {
-  const hasVoted = answer.votes?.some((v) => v.user === user?._id);
+const AnswerCard = ({
+  answer,
+  onVote,
+  onAccept,
+  isOwner,
+  user,
+  onLoginPrompt,
+}) => {
   const userVote = answer.votes?.find((v) => v.user === user?._id)?.value;
+  const handleVote = (value) => {
+    if (!user) {
+      onLoginPrompt();
+      return;
+    }
+    onVote(answer._id, value);
+  };
+  const handleAccept = () => {
+    if (!user) {
+      onLoginPrompt();
+      return;
+    }
+    onAccept(answer._id);
+  };
   return (
     <div className={`answer-card${answer.isAccepted ? " accepted" : ""}`}>
       <div className="answer-content">{answer.content}</div>
@@ -18,7 +38,7 @@ const AnswerCard = ({ answer, onVote, onAccept, isOwner, user }) => {
               className="answer-vote-btn"
               disabled={userVote === 1}
               title={userVote === 1 ? "You upvoted" : "Upvote"}
-              onClick={() => onVote(answer._id, 1)}
+              onClick={() => handleVote(1)}
             >
               ▲
             </button>
@@ -26,17 +46,14 @@ const AnswerCard = ({ answer, onVote, onAccept, isOwner, user }) => {
               className="answer-vote-btn"
               disabled={userVote === -1}
               title={userVote === -1 ? "You downvoted" : "Downvote"}
-              onClick={() => onVote(answer._id, -1)}
+              onClick={() => handleVote(-1)}
             >
               ▼
             </button>
           </>
         )}
         {isOwner && !answer.isAccepted && (
-          <button
-            className="answer-accept-btn"
-            onClick={() => onAccept(answer._id)}
-          >
+          <button className="answer-accept-btn" onClick={handleAccept}>
             Accept
           </button>
         )}

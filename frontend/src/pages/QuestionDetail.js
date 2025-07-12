@@ -4,6 +4,7 @@ import AnswerCard from "../components/AnswerCard";
 import RichTextEditor from "../components/RichTextEditor";
 import api from "../utils/api";
 import "../styles/QuestionDetail.css";
+import LoginModal from "../components/LoginModal";
 
 const QuestionDetail = ({ user }) => {
   const { id } = useParams();
@@ -16,6 +17,7 @@ const QuestionDetail = ({ user }) => {
   const [submitting, setSubmitting] = useState(false);
   const [voteError, setVoteError] = useState("");
   const [acceptError, setAcceptError] = useState("");
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchQuestion = async () => {
@@ -86,6 +88,10 @@ const QuestionDetail = ({ user }) => {
 
   return (
     <div className="question-detail-container">
+      <LoginModal
+        open={loginModalOpen}
+        onClose={() => setLoginModalOpen(false)}
+      />
       <div className="breadcrumb">
         <Link to="/">Home</Link> &gt;{" "}
         <span>{question.title.slice(0, 20)}...</span>
@@ -117,6 +123,7 @@ const QuestionDetail = ({ user }) => {
             onAccept={handleAccept}
             isOwner={isOwner}
             user={user}
+            onLoginPrompt={() => setLoginModalOpen(true)}
           />
         ))}
       </div>

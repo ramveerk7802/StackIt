@@ -20,17 +20,6 @@ const Navbar = ({ user, onLogout }) => {
         <Link to="/" className="navbar-logo">
           StackIt
         </Link>
-        <button className="navbar-ask-btn" onClick={() => navigate("/ask")}>
-          Ask New Question
-        </button>
-      </div>
-      <div className="navbar-center">
-        <select className="navbar-filter">
-          <option>Newest</option>
-          <option>Unanswered</option>
-          <option>More</option>
-        </select>
-        <input className="navbar-search" type="text" placeholder="Search" />
       </div>
       <div className="navbar-right" style={{ position: "relative" }}>
         <button
