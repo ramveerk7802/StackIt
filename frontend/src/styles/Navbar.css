@@ -83,3 +83,72 @@
   align-items: center;
   gap: 0.5rem;
 }
+
+@media (max-width: 1024px) and (min-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.7rem 0.7rem;
+    gap: 0.5rem;
+  }
+  .navbar-logo {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+  .navbar-center {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .navbar-filter, .navbar-search {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.7rem;
+  }
+  .navbar-right {
+    gap: 0.5rem;
+  }
+  .navbar-login, .navbar-profile button {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .navbar-bell {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 0.7rem 0.3rem;
+    gap: 0.2rem;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  .navbar-logo {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+  }
+  .navbar-center {
+    display: none;
+  }
+  .navbar-right {
+    gap: 0.3rem;
+  }
+  .navbar-login, .navbar-profile button {
+    font-size: 0.93rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 3px;
+  }
+  .navbar-bell {
+    font-size: 1rem;
+    margin-right: 0.2rem;
+  }
+  .navbar-bell-badge {
+    font-size: 0.7rem;
+    padding: 1px 5px;
+    top: -4px;
+    right: -4px;
+  }
+}

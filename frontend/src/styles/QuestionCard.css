@@ -60,3 +60,44 @@
   font-size: 0.9rem;
   color: #888;
 }
+
+@media (max-width: 1024px) and (min-width: 600px) {
+  .question-card {
+    padding: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+  .question-title {
+    font-size: 1rem;
+  }
+  .tag {
+    font-size: 0.8rem;
+    padding: 0.15rem 0.5rem;
+  }
+  .question-meta {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .question-card {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+  }
+  .question-title {
+    font-size: 0.97rem;
+  }
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.12rem 0.4rem;
+    margin-right: 0.2rem;
+  }
+  .question-meta {
+    font-size: 0.8rem;
+    flex-direction: row;
+    gap: 0.3rem;
+  }
+  .question-desc {
+    font-size: 0.95rem;
+  }
+}

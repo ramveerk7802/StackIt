@@ -37,3 +37,29 @@
   background: #1976d2;
   color: #fff;
 }
+
+@media (max-width: 1024px) and (min-width: 600px) {
+  .login-modal {
+    padding: 1.2rem 1.5rem;
+    font-size: 0.97rem;
+  }
+  .login-modal-actions button {
+    font-size: 0.97rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .login-modal {
+    padding: 0.7rem 0.2rem;
+    font-size: 0.95rem;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+  .login-modal-actions button {
+    font-size: 0.95rem;
+    padding: 0.35rem 0.7rem;
+  }
+}
