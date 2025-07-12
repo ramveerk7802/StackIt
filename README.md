@@ -90,7 +90,7 @@ npm start
 
 ## Demo Video
 
-> _Add a link to your demo video here (YouTube, Loom, etc.)_
+> _Add a link to your demo video here (https://drive.google.com/file/d/1etjOwka3C-5QLTMd0hcX2S30vbzDiIfJ/view?usp=drive_link)_
 
 ---
 
