@@ -103,3 +103,5 @@ npm start
 ---
 
 ## Screenshots
+
+![image alt](https://github.com/ramveerk7802/StackIt/blob/721d914de47d5d5558ace6108669a1250d788c03/img1.png)
