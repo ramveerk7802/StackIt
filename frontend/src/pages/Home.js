@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import QuestionCard from "../components/QuestionCard";
 import api from "../utils/api";
@@ -16,6 +16,7 @@ const Home = () => {
   const [search, setSearch] = useState("");
   const [searchInput, setSearchInput] = useState("");
   const navigate = useNavigate();
+  const questionsListRef = useRef(null);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -38,6 +39,13 @@ const Home = () => {
     };
     fetchQuestions();
   }, [page, filter, search]);
+
+  // Scroll questions list into view when page changes
+  useEffect(() => {
+    if (questionsListRef.current) {
+      questionsListRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [page]);
 
   const totalPages = Math.ceil(total / PAGE_SIZE);
 
@@ -78,7 +86,7 @@ const Home = () => {
           <button type="submit">Search</button>
         </form>
       </div>
-      <div className="questions-list">
+      <div className="questions-list" ref={questionsListRef}>
         {loading && <div>Loading questions...</div>}
         {error && <div className="home-error">{error}</div>}
         {!loading && !error && questions.length === 0 && (
