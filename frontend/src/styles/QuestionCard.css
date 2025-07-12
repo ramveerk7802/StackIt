@@ -30,6 +30,29 @@
 .question-desc {
   color: #444;
   margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.question-desc ul,
+.question-desc ol {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.question-desc li {
+  margin: 4px 0;
+}
+
+.question-desc a {
+  color: #1976d2;
+  text-decoration: underline;
+}
+
+.question-desc img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 8px 0;
 }
 .question-meta {
   display: flex;

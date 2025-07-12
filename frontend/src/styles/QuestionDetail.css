@@ -29,6 +29,34 @@
 .question-desc {
   color: #444;
   margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.question-desc ul,
+.question-desc ol {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+
+.question-desc li {
+  margin: 6px 0;
+}
+
+.question-desc a {
+  color: #1976d2;
+  text-decoration: underline;
+}
+
+.question-desc a:hover {
+  color: #1251a3;
+}
+
+.question-desc img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 12px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .question-meta {
   font-size: 0.95rem;

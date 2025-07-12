@@ -15,7 +15,12 @@ const QuestionCard = ({ question }) => {
           </span>
         ))}
       </div>
-      <div className="question-desc">{question.description}</div>
+      <div 
+        className="question-desc" 
+        dangerouslySetInnerHTML={{ 
+          __html: question.description.replace(/<[^>]*>/g, '').substring(0, 200) + (question.description.length > 200 ? '...' : '')
+        }}
+      />
       <div className="question-meta">
         <span className="question-user">{question.author.username}</span>
         <span className="question-answers">

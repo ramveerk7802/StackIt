@@ -26,7 +26,10 @@ const AnswerCard = ({
   };
   return (
     <div className={`answer-card${answer.isAccepted ? " accepted" : ""}`}>
-      <div className="answer-content">{answer.content}</div>
+      <div 
+        className="answer-content" 
+        dangerouslySetInnerHTML={{ __html: answer.content }}
+      />
       <div className="answer-meta">
         <span className="answer-user">{answer.author?.username}</span>
         <span className="answer-votes">

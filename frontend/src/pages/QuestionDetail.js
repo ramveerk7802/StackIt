@@ -105,7 +105,10 @@ const QuestionDetail = ({ user }) => {
             </span>
           ))}
         </div>
-        <div className="question-desc">{question.description}</div>
+        <div 
+          className="question-desc" 
+          dangerouslySetInnerHTML={{ __html: question.description }}
+        />
         <div className="question-meta">
           <span className="question-user">{question.author?.username}</span>
         </div>
