@@ -36,3 +36,52 @@
 .ask-form button[type="submit"]:hover {
   background: #1251a3;
 }
+
+@media (max-width: 1024px) and (min-width: 600px) {
+  .ask-container {
+    max-width: 95vw;
+    padding: 1.2rem;
+  }
+  .ask-form input[type="text"],
+  .ask-form .rich-text-editor,
+  .ask-form .tag-input {
+    font-size: 0.97rem;
+    padding: 0.5rem;
+  }
+  .ask-form button[type="submit"] {
+    font-size: 0.97rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .ask-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0.7rem 0.1rem;
+    border-radius: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+  .ask-form {
+    gap: 0.7rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .ask-form label {
+    font-size: 0.97rem;
+  }
+  .ask-form input[type="text"],
+  .ask-form .rich-text-editor,
+  .ask-form .tag-input {
+    font-size: 0.95rem;
+    padding: 0.4rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .ask-form button[type="submit"] {
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+}
