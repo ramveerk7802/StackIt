@@ -1,0 +1,38 @@
+.ask-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 2rem;
+}
+.ask-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.ask-form label {
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+.ask-form input[type="text"],
+.ask-form .rich-text-editor,
+.ask-form .tag-input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.ask-form button[type="submit"] {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.ask-form button[type="submit"]:hover {
+  background: #1251a3;
+}

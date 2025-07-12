@@ -1,0 +1,9 @@
+.rich-text-editor {
+  width: 100%;
+  min-height: 120px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.6rem;
+  resize: vertical;
+}
