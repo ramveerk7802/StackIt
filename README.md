@@ -90,7 +90,7 @@ npm start
 
 ## Demo Video
 
-> _Add a link to your demo video here (YouTube, Loom, etc.)_
+> _Add a link to your demo video here (https://drive.google.com/file/d/1etjOwka3C-5QLTMd0hcX2S30vbzDiIfJ/view?usp=drive_link)_
 
 ---
 
@@ -103,3 +103,11 @@ npm start
 ---
 
 ## Screenshots
+
+![image alt](https://github.com/ramveerk7802/StackIt/blob/721d914de47d5d5558ace6108669a1250d788c03/img1.png)
+![image alt](https://github.com/ramveerk7802/StackIt/blob/42d65479c21c89c0d47dbf5e299fd58988aed961/img2.png)
+![image alt](https://github.com/ramveerk7802/StackIt/blob/beab8b76889b96295ab52b23fa27f3caf34f48cb/img3.png)
+![image alt](https://github.com/ramveerk7802/StackIt/blob/beab8b76889b96295ab52b23fa27f3caf34f48cb/img4.png)
+![image alt](https://github.com/ramveerk7802/StackIt/blob/beab8b76889b96295ab52b23fa27f3caf34f48cb/img5.png)
+![image alt](https://github.com/ramveerk7802/StackIt/blob/beab8b76889b96295ab52b23fa27f3caf34f48cb/img6.png)
+![image alt](https://github.com/ramveerk7802/StackIt/blob/beab8b76889b96295ab52b23fa27f3caf34f48cb/img7.png)
